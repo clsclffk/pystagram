@@ -11,7 +11,7 @@ def feeds(request):
     if not request.user.is_authenticated:
         return redirect("users:login")
     
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by('-created')
     comment_form = CommentForm()
     context = {"posts": posts, 
                "comment_form" : comment_form,}
