@@ -92,12 +92,17 @@ a.btn {
 }
 
 .btn-primary {
-  border: 1px solid #00c3bd;
-  color: #00c3bd;
+  border: 1px solid #0095f6;
+  color: #0095f6;
 }
 .btn-primary:hover {
   color: white;
-  background-color: #00c3bd;
+  background-color: #0095f6;
+}
+
+.btn-primary.active {
+  color: white;
+  background-color: #0095f6; /* 팔로우 중일 때 배경색 */
 }
 
 .btn-secondary {
@@ -570,3 +575,30 @@ body > nav > a {
 #tags .tags-header {
   margin-bottom: 10px;
 }
+
+/* 다크모드 버튼 */
+button.dark-mode-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode nav {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode a {
+  color: #ffffff;
+}
+
+body.dark-mode .dark-mode-toggle {
+  color: #f1f1f1;
+}
+
