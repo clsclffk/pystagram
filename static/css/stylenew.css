@@ -64,6 +64,7 @@ body {
   height: 59px;
   border-bottom: 1px solid #ddd;
 }
+
 .navbar img {
   height: 29.5px;
   border-radius: 3px;
@@ -71,7 +72,12 @@ body {
 }
 .navbar .btn {
   position: absolute;
-  right: 20px;
+  right: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  color: #1f1f1f;
+  margin-left: 20px;
+  text-decoration: none;
 }
 
 .btn {
@@ -92,17 +98,12 @@ a.btn {
 }
 
 .btn-primary {
-  border: 1px solid #0095f6;
-  color: #0095f6;
+  border: 1px solid #00c3bd;
+  color: #00c3bd;
 }
 .btn-primary:hover {
   color: white;
-  background-color: #0095f6;
-}
-
-.btn-primary.active {
-  color: white;
-  background-color: #0095f6; /* 팔로우 중일 때 배경색 */
+  background-color: #00c3bd;
 }
 
 .btn-secondary {
@@ -369,7 +370,7 @@ article.post .post-comment-create input, article.post .post-comment-create texta
   height: calc(1.5em + 30px);
 }
 article.post .post-comment-create button {
-  color: #0095f6;
+  color: #424242;
   background-color: transparent;
   border: none;
   padding: 0 15px;
@@ -405,9 +406,9 @@ article.post .post-comment-create button:hover {
   box-sizing: border-box;
 }
 #post-add button {
-  color: #0095f6;
+  color: #424242;
   background-color: transparent;
-  border: 1px solid #0095f6;
+  border: 1px solid #424242;
   border-radius: 5px;
   box-sizing: border-box;
   padding: 8px 55px;
@@ -416,7 +417,7 @@ article.post .post-comment-create button:hover {
 }
 #post-add button:hover {
   color: white;
-  background-color: #0095f6;
+  background-color: #1d1d1d;
 }
 
 #profile {
@@ -529,12 +530,39 @@ body > nav {
 }
 body > nav > h1 {
   font-weight: bold;
-  flex-grow: 1;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
 }
+
+body > nav > h1 > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+body > nav > h1 > a > img {
+  height: 30px; /* 로고 크기에 맞게 조정 */
+  margin-right: 10px;
+}
+
 body > nav > a {
   font-weight: 400;
-  color: #0095f6;
+  color: #2c2c2c;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 11px;
   margin-right: 10px;
+  text-decoration: none;
+}
+
+body > nav > a:hover {
+  color: #a5a4a4;
+  font-weight: bold;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  margin-right: 10px;
+  text-decoration: none;
 }
 
 #container {
@@ -575,30 +603,3 @@ body > nav > a {
 #tags .tags-header {
   margin-bottom: 10px;
 }
-
-/* 다크모드 버튼 */
-button.dark-mode-toggle {
-  background: none;
-  border: none;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-body.dark-mode nav {
-  background-color: #121212;
-  color: #f1f1f1;
-}
-
-body.dark-mode a {
-  color: #ffffff;
-}
-
-body.dark-mode .dark-mode-toggle {
-  color: #f1f1f1;
-}
-
