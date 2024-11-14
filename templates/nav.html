@@ -1,9 +1,12 @@
+{% load static %}
+
 <nav>
     <h1>
-        <a href="{% url 'posts:feeds' %}">Pystagram</a>
+        <a href="{% url 'posts:feeds' %}">
+            <img src="{% static 'logo.png' %}" alt="Pystagram Logo" class="navbar-logo">
+            <span>Pystagram</span>
+        </a>
     </h1>
     <a href="{% url 'posts:post_add' %}">Add post</a>
     <a href="{% url 'users:logout' %}">Logout</a>
-    <!-- 다크모드 토글 버튼 자리 -->
-    <button class="dark-mode-toggle">🌙</button>
 </nav>
