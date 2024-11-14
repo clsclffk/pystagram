@@ -602,3 +602,46 @@ body.dark-mode .dark-mode-toggle {
   color: #f1f1f1;
 }
 
+/* 다크모드에서 버튼 스타일 */
+body.dark-mode .btn-primary {
+  border: 1px solid #fff; /* 테두리는 흰색 */
+  color: #fff; /* 글자색은 흰색 */
+  background-color: #333; /* 배경색을 검정색에 가까운 어두운 색으로 */
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #fff; /* 호버시 배경을 흰색으로 변경 */
+  color: #333; /* 호버시 글자색을 어두운 색으로 변경 */
+}
+
+body.dark-mode .btn-primary.active {
+  background-color: #fff; /* active 상태에서 배경은 파란색 */
+  color: #333; /* active 상태에서 글자색은 흰색 */
+  border: 1px solid #333; /* 테두리도 파란색으로 */
+}
+
+/* 다크모드에서 댓글 수 표시 스타일 */
+body.dark-mode .post-buttons span {
+  color: #ddd; /* 글자색을 밝게 */
+}
+
+/* 다크모드에서 Likes 버튼의 텍스트 색을 흰색으로 변경 */
+body.dark-mode .post-buttons button {
+  color: #fff; /* 버튼 내 텍스트 색을 흰색으로 변경 */
+}
+
+/* 다크모드에서 댓글 작성란 스타일 */
+body.dark-mode .post-comment-create input,
+body.dark-mode .post-comment-create button {
+  background-color: #444; /* 댓글 입력창 배경을 어두운 회색으로 */
+  color: #fff; /* 글자 색을 흰색으로 */
+  border: 1px solid #555; /* 테두리 색을 다크 그레이로 */
+}
+
+body.dark-mode article.post .post-comment-create textarea {
+  background-color: #444; /* 댓글 입력창 배경을 어두운 회색으로 */
+  color: #fff; /* 글자 색을 흰색으로 */
+  border: 1px solid #555; /* 테두리 색을 다크 그레이로 */
+  resize: none; /* 사용자 크기 조절을 비활성화 */
+  overflow: hidden; /* 스크롤바 숨기기 */
+}
