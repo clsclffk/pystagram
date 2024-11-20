@@ -83,3 +83,24 @@ def follow(request, user_id):
 
     url_next = request.GET.get("next") or reverse("users:profile", args=[user.id])
     return HttpResponseRedirect(url_next)
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from django.shortcuts import get_object_or_404
+from .models import User
+from .serializers import FollowingSerializer, FollowerSerializer
+
+class FollowingListView(APIView):
+    def get(self, request, user_id, format=None):
+        user = get_object_or_404(User, id=user_id)
+        following_users = user.following.all()
+        serializer = FollowingSerializer(user)
+        return Response(serializer.data)
+
+class FollowerListView(APIView):
+    def get(self, request, user_id, format=None):
+        user = get_object_or_404(User, id=user_id)
+        followers = user.followers.all()
+        serializer = FollowerSerializer(user)
+        return Response(serializer.data)
