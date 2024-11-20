@@ -111,4 +111,14 @@ def post_like(request, post_id):
     url_next = request.GET.get("next") or reverse("posts:feeds") + f"#post-{post.id}"
     return HttpResponseRedirect(url_next)
     
-    
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from posts.models import Post
+from posts.serializers import PostSerializer
+
+class PostList(APIView):
+    def get(self, request):
+        posts = Post.objects.all().order_by('-created')
+        serializer = PostSerializer(posts, many=True)
+        return Response(serializer.data)
