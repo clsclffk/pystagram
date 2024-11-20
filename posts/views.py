@@ -122,3 +122,13 @@ class PostList(APIView):
         posts = Post.objects.all().order_by('-created')
         serializer = PostSerializer(posts, many=True)
         return Response(serializer.data)
+
+class PostDetail(APIView):
+    def get(self, request, post_id):
+        try:
+            post = Post.objects.get(id=post_id)
+        except Post.DoesNotExist:
+            return Response({"detail": "Post not found"}, status=status.HTTP_404_NOT_FOUND)
+
+        serializer = PostSerializer(post)
+        return Response(serializer.data)
