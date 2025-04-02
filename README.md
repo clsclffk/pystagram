@@ -18,3 +18,6 @@
 | `templates/` | HTML 템플릿 |
 | `static/` | 정적 파일 (CSS, 이미지 등) |
 | `media/` | 업로드된 사용자 이미지 |
+
+## 🖼 화면 설계도 (Wireframe)
+![image](https://github.com/user-attachments/assets/0f4d175c-af27-47d6-a9ea-58a92e254878)
